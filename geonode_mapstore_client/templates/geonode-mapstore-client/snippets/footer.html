@@ -1,19 +1,55 @@
-<footer class="gn-footer">
-    <ul>
-        <li>
-            <a href="https://geonode.org/" class="nav-link">
-                <span>geonode.org</span>
-            </a>
-        </li>
-        <li>
-            <a href="/developer/" class="nav-link">
-                <span>Developers3</span>
-            </a>
-        </li>
-        <li>
-            <a href="/about/" class="nav-link">
-                <span>About</span>
-            </a>
-        </li>
-    </ul>
+{% load i18n %}
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Project Info -->
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold">ZALF Repository</h5>
+                <p class="text-muted small">
+                    Central hub for research data and knowledge, enabling open science and collaboration.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold">{% trans "Quick Links" %}</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/catalogue/#/datasets" class="text-muted text-decoration-none">{% trans "Datasets"
+                            %}</a></li>
+                    <li><a href="/catalogue/#/maps" class="text-muted text-decoration-none">{% trans "Maps" %}</a></li>
+                    <li><a href="/catalogue/#/geostories" class="text-muted text-decoration-none">{% trans "Geostories"
+                            %}</a></li>
+                    <li><a href="/about/" class="text-muted text-decoration-none">{% trans "About" %}</a></li>
+                </ul>
+            </div>
+
+            <!-- Resources -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">{% trans "Resources" %}</h6>
+                <ul class="list-unstyled">
+                    <li><a href="/publications/" class="text-muted text-decoration-none">{% trans "Publications" %}</a>
+                    </li>
+                    <li><a href="/policy/" class="text-muted text-decoration-none">{% trans "Data Policy" %}</a></li>
+                    <li><a href="/contact/" class="text-muted text-decoration-none">{% trans "Contact Us" %}</a></li>
+                    <li><a href="/faq/" class="text-muted text-decoration-none">{% trans "FAQ" %}</a></li>
+                </ul>
+            </div>
+
+            <!-- Social & Powered by -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">{% trans "Follow Us" %}</h6>
+                <div class="d-flex gap-3 mb-3">
+                    <a href="#" class="text-muted" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="text-muted" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                    <a href="#" class="text-muted" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                    <a href="#" class="text-muted" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                </div>
+                <h6 class="fw-bold small">{% trans "Powered by" %}</h6>
+            </div>
+        </div>
+
+        <div class="border-top border-secondary pt-3 text-center text-muted small">
+            © {{ year|default:2025 }} ZALF Repository. {% trans "All rights reserved." %}
+        </div>
+    </div>
 </footer>
